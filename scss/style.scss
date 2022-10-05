@@ -184,8 +184,7 @@ html {
             position: absolute;
             top: 2px;
             left: -184px;
-            opacity: 0;
-            animation: in 0.2s ease-in-out forwards;
+            animation: invisible 0.3s ease-in-out, in 0.2s ease-in-out forwards;
           }
 
           .unionLogo {
@@ -207,8 +206,8 @@ html {
             bottom: 0;
             left: -409px;
             z-index: -2;
-            opacity: 0;
-            animation: decoIn2 0.1s 0.3s ease-in-out forwards;
+            animation: invisible 0.3s ease-in-out,
+              decoIn2 0.1s 0.3s ease-in-out forwards;
           }
         }
 
@@ -312,8 +311,8 @@ html {
             top: 151px;
             right: -240px;
             z-index: 4;
-            opacity: 0;
-            animation: showIn 0.15s 0.3s ease-in forwards;
+            animation: invisible 0.3s ease-in-out,
+              showIn 0.15s 0.3s ease-in forwards;
           }
 
           .deco2 {
@@ -324,8 +323,8 @@ html {
             position: absolute;
             top: 0;
             right: -382px;
-            opacity: 0;
-            animation: decoIn 0.1s 0.3s ease-in-out forwards;
+            animation: invisible 0.3s ease-in-out,
+              decoIn 0.1s 0.3s ease-in-out forwards;
           }
         }
       }
@@ -341,6 +340,15 @@ html {
         z-index: -999;
       }
     }
+  }
+}
+
+@keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

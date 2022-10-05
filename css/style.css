@@ -197,9 +197,8 @@ html body main .center .left .logo {
   position: absolute;
   top: 2px;
   left: -184px;
-  opacity: 0;
-  -webkit-animation: in 0.2s ease-in-out forwards;
-          animation: in 0.2s ease-in-out forwards;
+  -webkit-animation: invisible 0.3s ease-in-out, in 0.2s ease-in-out forwards;
+          animation: invisible 0.3s ease-in-out, in 0.2s ease-in-out forwards;
 }
 html body main .center .left .unionLogo {
   width: 266px;
@@ -219,9 +218,8 @@ html body main .center .left .deco1 {
   bottom: 0;
   left: -409px;
   z-index: -2;
-  opacity: 0;
-  -webkit-animation: decoIn2 0.1s 0.3s ease-in-out forwards;
-          animation: decoIn2 0.1s 0.3s ease-in-out forwards;
+  -webkit-animation: invisible 0.3s ease-in-out, decoIn2 0.1s 0.3s ease-in-out forwards;
+          animation: invisible 0.3s ease-in-out, decoIn2 0.1s 0.3s ease-in-out forwards;
 }
 html body main .center .right {
   width: 50%;
@@ -332,9 +330,8 @@ html body main .center .right .mainObject {
   top: 151px;
   right: -240px;
   z-index: 4;
-  opacity: 0;
-  -webkit-animation: showIn 0.15s 0.3s ease-in forwards;
-          animation: showIn 0.15s 0.3s ease-in forwards;
+  -webkit-animation: invisible 0.3s ease-in-out, showIn 0.15s 0.3s ease-in forwards;
+          animation: invisible 0.3s ease-in-out, showIn 0.15s 0.3s ease-in forwards;
 }
 html body main .center .right .deco2 {
   width: 292px;
@@ -344,9 +341,8 @@ html body main .center .right .deco2 {
   position: absolute;
   top: 0;
   right: -382px;
-  opacity: 0;
-  -webkit-animation: decoIn 0.1s 0.3s ease-in-out forwards;
-          animation: decoIn 0.1s 0.3s ease-in-out forwards;
+  -webkit-animation: invisible 0.3s ease-in-out, decoIn 0.1s 0.3s ease-in-out forwards;
+          animation: invisible 0.3s ease-in-out, decoIn 0.1s 0.3s ease-in-out forwards;
 }
 html body main .bg {
   width: 100%;
@@ -358,6 +354,23 @@ html body main .bg {
   z-index: -999;
 }
 
+@-webkit-keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @-webkit-keyframes in {
   0% {
     left: -780px;
@@ -368,7 +381,6 @@ html body main .bg {
     opacity: 1;
   }
 }
-
 @keyframes in {
   0% {
     left: -780px;
