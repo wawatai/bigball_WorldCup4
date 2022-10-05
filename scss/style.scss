@@ -150,7 +150,7 @@ a:link {
 html {
   width: 100%;
   height: 100%;
-  background-color: #3b80ad;
+  background-color: #d9e1e4;
 
   body {
     min-width: 1100px;
@@ -184,6 +184,8 @@ html {
             position: absolute;
             top: 2px;
             left: -184px;
+            opacity: 0;
+            animation: in 0.2s ease-in-out forwards;
           }
 
           .unionLogo {
@@ -205,6 +207,8 @@ html {
             bottom: 0;
             left: -409px;
             z-index: -2;
+            opacity: 0;
+            animation: decoIn2 0.1s 0.3s ease-in-out forwards;
           }
         }
 
@@ -306,9 +310,10 @@ html {
             background-size: contain;
             position: absolute;
             top: 151px;
-            left: 232px;
+            right: -240px;
             z-index: 4;
-            animation: showIn 0.5s ease-in forwards;
+            opacity: 0;
+            animation: showIn 0.15s 0.3s ease-in forwards;
           }
 
           .deco2 {
@@ -319,6 +324,8 @@ html {
             position: absolute;
             top: 0;
             right: -382px;
+            opacity: 0;
+            animation: decoIn 0.1s 0.3s ease-in-out forwards;
           }
         }
       }
@@ -334,5 +341,50 @@ html {
         z-index: -999;
       }
     }
+  }
+}
+
+@keyframes in {
+  0% {
+    left: -780px;
+    opacity: 0;
+  }
+  100% {
+    left: -184px;
+    opacity: 1;
+  }
+}
+@keyframes decoIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  100% {
+    width: 292px;
+    height: 373px;
+    opacity: 1;
+  }
+}
+@keyframes decoIn2 {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  100% {
+    width: 1398px;
+    height: 434px;
+    opacity: 1;
+  }
+}
+@keyframes showIn {
+  0% {
+    right: -800px;
+    opacity: 0;
+  }
+  100% {
+    right: -240px;
+    opacity: 1;
   }
 }
